@@ -30,4 +30,14 @@ func _apply_shake():
 	position = _start_position + Vector2(o_x, o_y)
  
 func _get_neg_or_pos_scalar():
-	return rand_range(-1.0, 1.0)
+	return rand_range(-1.0, 1.0)	
+
+	if Input.is_action_pressed("left"):
+		add_trauma(.4)
+	if Input.is_action_pressed("right"):
+		add_trauma(.2)
+	if Input.is_action_pressed("up"):
+		add_trauma(.6)
+	if Input.is_action_pressed("down"):
+		add_trauma(.8)
+
